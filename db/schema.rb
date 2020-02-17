@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_02_17_161356) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
-    t.integer "duration"
+    t.date "end_date"
     t.bigint "disease_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
