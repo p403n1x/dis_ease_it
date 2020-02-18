@@ -1,6 +1,6 @@
 class DiseasesController < ApplicationController
   skip_before_action :authenticate_user!
-  
+
   def index
     @diseases = Disease.all
   end
@@ -11,6 +11,7 @@ class DiseasesController < ApplicationController
   end
 
   def new
+    @disease = Disease.new
   end
 
   def create
