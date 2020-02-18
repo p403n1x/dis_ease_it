@@ -5,4 +5,9 @@ class PagesController < ApplicationController
     @diseases = Disease.all
     @selection = @diseases.sample(3)
   end
+
+
+
+
+
 end
