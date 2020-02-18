@@ -1,9 +1,12 @@
 class DiseasesController < ApplicationController
-    skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!
+  
   def index
   end
 
   def show
+    @disease = Disease.find(params[:id])
+
   end
 
   def new
