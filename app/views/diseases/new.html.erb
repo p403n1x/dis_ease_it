@@ -1,2 +1,9 @@
-<h1>Diseases#new</h1>
-<p>Find me in app/views/diseases/new.html.erb</p>
+
+<div class="container formnew">
+  <%= simple_form_for @disease do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <br>
+  <%= f.button :submit, 'Create a new disease, silly God!!' , class:'btn btn-primary' %>
+  <% end %>
+</div>
