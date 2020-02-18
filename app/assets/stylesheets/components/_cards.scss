@@ -1,7 +1,15 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.cards a {
+  color : black;
+}
+
+.cards a:hover {
+  text-decoration: none;
 }
 
 .card_category {
@@ -53,3 +61,4 @@
 .card-disease .card-disease-infos {
   padding: 16px;
 }
+
