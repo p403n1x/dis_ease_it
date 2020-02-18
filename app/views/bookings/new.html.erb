@@ -1,2 +1,12 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+
+<div class="container">
+  <h1>Your bookings 🦠</h1>
+  <%= simple_form_for([@disease, @booking]) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+  <% end %>
+
+  <br>
+  <%= link_to 'Back', diseases_path %>
+</div>
