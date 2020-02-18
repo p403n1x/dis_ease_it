@@ -1,5 +1,13 @@
 class BookingsController < ApplicationController
-  before_action :set_disease
+  before_action :set_disease, except: [:index, :show]
+
+  def index
+    @bookings = Booking.all
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
   def new
     @disease = Disease.find(params[:disease_id])

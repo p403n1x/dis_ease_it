@@ -1,0 +1,13 @@
+<div class="container mt-3">
+
+  <h1>Your bookings 🦠</h1>
+  <br>
+  <% @bookings.each do |booking| %>
+    <h3><%= link_to booking.disease.name, booking_path(booking) %></h3>
+    <p><%= booking.user.email %></p>
+    <span>from: <%= booking.start_date %></span>, to:
+    <span><%= booking.end_date %></span>
+    <br>
+  <% end %>
+
+</div>

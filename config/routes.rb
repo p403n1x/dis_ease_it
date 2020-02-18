@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :diseases, only: [:show, :index, :new, :create, :destroy]  do
     resources :bookings, only: [:new, :create, :destroy]
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :bookings, only: [:index, :show]
 end
