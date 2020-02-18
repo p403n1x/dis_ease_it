@@ -1,2 +1,24 @@
-<h1>Diseases#show</h1>
-<p>Find me in app/views/diseases/show.html.erb</p>
+
+
+ <body>
+    <div class="container pt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+           <div class="row justify-content-center">
+            <table class="table table-bordered">
+              <thead>
+                <th scope="col"><%= @disease.name %></th>
+              </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><%= @disease.description %></th>
+                  </tr>
+                </tbody>
+            </table>
+            <div><a class="btn btn-primary" href="#">Book This Disease</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
