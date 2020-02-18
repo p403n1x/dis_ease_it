@@ -2,6 +2,7 @@ class DiseasesController < ApplicationController
   skip_before_action :authenticate_user!
   
   def index
+    @diseases = Disease.all
   end
 
   def show
