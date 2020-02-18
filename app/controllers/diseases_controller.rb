@@ -15,8 +15,22 @@ class DiseasesController < ApplicationController
   end
 
   def create
+    @disease = Disease.new(disease_params)
+
+    if @disease.save
+      redirect_to disease_path(@disease)
+    else
+      render :new
+    end
   end
 
   def destroy
   end
+
+private
+
+  def disease_params
+    params.require(:disease).permit(:name, :description)
+  end
+
 end
