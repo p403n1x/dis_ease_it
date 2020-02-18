@@ -1,10 +1,11 @@
 
-<div class="container">
-  <h1>Your bookings 🦠</h1>
+<div class="container mt-3">
+  <h1>Book <%= @disease.name %> 🦠</h1>
   <%= simple_form_for([@disease, @booking]) do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit %>
+    <p><%= f.input :start_date %></p>
+    <p><%= f.input :end_date %></p>
+    <br>
+    <%= f.submit %>
   <% end %>
 
   <br>
