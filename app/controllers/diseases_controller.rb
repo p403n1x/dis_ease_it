@@ -15,6 +15,7 @@ class DiseasesController < ApplicationController
 
   def create
     @disease = Disease.new(disease_params)
+    @disease.image = "sample.jpg"
 
     if @disease.save
       redirect_to disease_path(@disease)
