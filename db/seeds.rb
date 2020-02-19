@@ -10,13 +10,13 @@ Booking.delete_all
 Disease.delete_all
 
 puts "Création des maladies"
-Disease.create!(name: 'Coronavirus', image: 'coronavirus.jpeg', description: 'any of a group of RNA viruses that cause a variety of diseases in humans and other animals.')
-Disease.create!(name: 'Bird flu', image: 'bird_flu.jpeg', description: 'Bird flu, also called avian influenza, is a viral infection that can infect not only birds, but also humans and other animals. Most forms of the virus are restricted to birds.')
-Disease.create!(name: 'Delhi belly', image: 'delhi_belly.jpeg', description: 'an upset stomach accompanied by diarrhoea, especially as suffered by visitors to India.')
-Disease.create!(name: 'Gastroentiritis', image: 'gastro.jpeg', description: 'The majority of cases of acute diarrhea correspond to gastroenteritis of viral origin, most often trivial and of short duration.')
-Disease.create!(name: 'Measles', image: 'measles.jpeg', description: 'Measles is a highly contagious infectious disease caused by the measles virus.Symptoms usually develop 10–12 days after exposure to an infected person and last 7–10 days.')
-Disease.create!(name: 'Food poisoning', image: 'food_poisoning.jpeg', description: 'illness caused by bacteria or other toxins in food, typically with vomiting and diarrhoea.')
-Disease.create!(name: 'Chlamydia', image: 'chlamydia.jpeg',description: 'is a sexually transmitted infection caused by the bacterium Chlamydia trachomatis.')
+Disease.create!(name: 'Coronavirus', image: 'coronavirus.jpg', description: 'any of a group of RNA viruses that cause a variety of diseases in humans and other animals.')
+Disease.create!(name: 'Bird flu', image: 'bird_flu.jpg', description: 'Bird flu, also called avian influenza, is a viral infection that can infect not only birds, but also humans and other animals. Most forms of the virus are restricted to birds.')
+Disease.create!(name: 'Delhi belly', image: 'delhi_belly.jpg', description: 'an upset stomach accompanied by diarrhoea, especially as suffered by visitors to India.')
+Disease.create!(name: 'Gastroentiritis', image: 'gastro.jpg', description: 'The majority of cases of acute diarrhea correspond to gastroenteritis of viral origin, most often trivial and of short duration.')
+Disease.create!(name: 'Measles', image: 'measles.jpg', description: 'Measles is a highly contagious infectious disease caused by the measles virus.Symptoms usually develop 10–12 days after exposure to an infected person and last 7–10 days.')
+Disease.create!(name: 'Food poisoning', image: 'food_poisoning.jpg', description: 'illness caused by bacteria or other toxins in food, typically with vomiting and diarrhoea.')
+Disease.create!(name: 'Chlamydia', image: 'chlamydia.jpg',description: 'is a sexually transmitted infection caused by the bacterium Chlamydia trachomatis.')
 Disease.create!(name: 'Tonsillitis', image: 'tonsillitis.jpg', description: 'Tonsillitis is inflammation of the tonsils, two oval-shaped pads of tissue at the back of the throat — one tonsil on each side.')
 
 puts "Finish "
