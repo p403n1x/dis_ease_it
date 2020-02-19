@@ -1,7 +1,9 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cards a {
@@ -9,6 +11,21 @@
 }
 
 .cards a:hover {
+  text-decoration: none;
+}
+
+
+.cards-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.cards-index a {
+  color : black;
+}
+
+.cards-index a:hover {
   text-decoration: none;
 }
 
