@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_disease, except: [:index, :show]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def show
