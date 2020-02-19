@@ -1,20 +1,23 @@
 <div class="container mt-3">
 
-  <h1 class="text-center">Order</h1>
+  <h1 class="text-center">Order confirmation</h1>
   <h3><%= @booking.disease.name %></h3>
   <p><%= @booking.disease.description %></p>
 
   <br>
   <h3>Owner :</h3>
-  <p><%= @booking.user.email %></p>
+  <p>First name : <%= @booking.user.first_name %></p>
+  <p>Last name : <%= @booking.user.last_name %></p>
+  <p>Address : <%= @booking.user.address %></p>
+  <p>Email : <%= @booking.user.email %></p>
+
 
   <br>
   <h3>Duration :</h3>
   <span>From: <%= @booking.start_date %></span>
   <span class="d-block mb-3">To: <%= @booking.end_date %></span>
 
+  <%= link_to 'Back', bookings_path, class: "btn btn-ghost align-right" %>
+  <%= link_to 'Delete', disease_booking_path(@booking.disease, @booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
 
-  <%= link_to 'Delete', disease_booking_path(@booking.disease, @booking), method: :delete, data: { confirm: "Are you sure?" } %>
-  <br>
-  <%= link_to 'View all my bookings', bookings_path %>
 </div>
