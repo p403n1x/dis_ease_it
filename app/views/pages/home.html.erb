@@ -4,7 +4,7 @@
   <h1>Sick of being well? Rent a sickness!</h1>
   <h3>Trending</h3>
 
-<br>
+  <br>
 
 
   <div class="cards">
@@ -13,14 +13,16 @@
        <div class="col-12 col-md-6 col-lg-4">
           <div class="card-disease align-content">
             <%= image_tag s.image %>
-            <h2><%= s.name %></h2>
-            <p><%= s.description %></p>
+            <div class="card-product-infos">
+              <h2><%= s.name %></h2>
+              <p><%= s.description %></p>
+            </div>
           </div>
         </div>
       <% end %>
     <% end %>
-    <h3><%=link_to "See all our diseases", diseases_path  %></h3>
   </div>
+  <h3><%=link_to "See all our diseases", diseases_path  %></h3>
 </div>
 
 
