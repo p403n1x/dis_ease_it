@@ -1,25 +1,19 @@
 
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container text-center mt-3">
 
-
-<DIV ALIGN="CENTER">
-
-<h1>Trending</h1>
- <h3>Sick of being well? Rent a sickness!</h3>
-</DIV>
+  <h1>Sick of being well? Rent a sickness!</h1>
+  <h3>Trending</h3>
 
 <br>
 
-<div class="container">
+
   <% @selection.each do |s| %>
     <%= link_to disease_path(s) do %>
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card-disease">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2><%= s.name %></h2>
-            <p><%= s.description %></p>
-          </div>
+        <div class="card-disease align-content">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <h2><%= s.name %></h2>
+          <p><%= s.description %></p>
         </div>
       </div>
     <% end %>
