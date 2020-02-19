@@ -7,7 +7,9 @@ class PagesController < ApplicationController
   end
 
 
+  def profil
 
+  end
 
 
 end

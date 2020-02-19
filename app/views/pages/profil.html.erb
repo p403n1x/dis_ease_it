@@ -1,0 +1,8 @@
+
+<h1> My profil </h1>
+
+<ul>
+  <li> E-mail : <%= current_user.email %></li>
+  <li> <%= link_to "My Bookings", bookings_path %></li>
+  <li> <%= link_to "Add a new disease", new_disease_path %> </li>
+</ul>

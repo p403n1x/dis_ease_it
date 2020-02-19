@@ -15,5 +15,6 @@
 
 
   <%= link_to 'Delete', disease_booking_path(@booking.disease, @booking), method: :delete, data: { confirm: "Are you sure?" } %>
-
+  <br>
+  <%= link_to 'View all my bookings', bookings_path %>
 </div>
