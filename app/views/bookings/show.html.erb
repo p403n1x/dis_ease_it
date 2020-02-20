@@ -6,9 +6,10 @@
 
     <div class="card-disease my-3">
       <%= image_tag @booking.disease.image %>
-      <h2><%= @booking.disease.name %></h2>
-      <p><%= @booking.disease.description %></p>
-
+      <div class="card-product-infos mx-3">
+        <h2><%= @booking.disease.name %></h2>
+        <p class="mb-3"><%= @booking.disease.description %></p>
+      </div>
     </div>
 
     <div class="card-profil col-4 offset-1 my-3">
@@ -30,3 +31,5 @@
   <%= link_to 'Back', bookings_path, class: "btn btn-ghost align-right" %>
   <%= link_to 'Delete', disease_booking_path(@booking.disease, @booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
 </div>
+
+

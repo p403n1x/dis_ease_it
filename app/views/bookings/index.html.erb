@@ -1,14 +1,26 @@
 <div class="container mt-3">
 
-  <h1>Your bookings 🦠</h1>
+  <h1 class="text-center"> Your bookings 🦠</h1>
   <br>
-  <% @bookings.each do |booking| %>
-    <h3><%= link_to booking.disease.name, booking_path(booking) %></h3>
-    <p><%= booking.user.email %></p>
-    <span>from: <%= booking.start_date %></span>, to:
-    <span><%= booking.end_date %></span>
-    <br>
-  <% end %>
+  <div class="row justify-content-center">
+
+    <div class="cards-index">
+
+    <% @bookings.each do |booking| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card-disease align-content mb-3">
+          <%= cl_image_tag booking.disease.image.key, height: 300, width: 400, crop: :fill %>
+          <div class="card-product-infos mx-3">
+
+            <h3><%= link_to booking.disease.name, booking_path(booking) %></h3>
+            <p class="text-decoration: none"><strong>From:</strong> <%= booking.start_date %></p>
+            <p class="d-block mb-3"><strong>To:</strong> <%= booking.end_date %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 <br>
-<%= link_to 'Home', root_path, class: "btn btn-ghost" %>
+<%= link_to 'Home', root_path, class: "btn btn-ghost btn-ghost:hover" %>
 </div>

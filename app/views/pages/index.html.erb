@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1>Your diseases</h1>
+  <h1 class="text-center">Your diseases</h1>
 
 
   <div class="cards-index">
@@ -8,9 +8,9 @@
     <% @diseases.each do |disease| %>
     <div class="card-disease">
       <%= image_tag disease.image %>
-      <div class="card-product-infos">
+      <div class="card-product-infos mx-3">
         <h2><%= disease.name %></h2>
-        <p><%= disease.description %></p>
+        <p class="mb-3"><%= disease.description %></p>
         <%= link_to 'Delete', profil_destroy_path(disease), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
       </div>
     </div>
