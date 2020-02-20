@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @diseases = Disease.all
     @selection = @diseases.sample(2)
+
   end
 
 
