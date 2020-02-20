@@ -1,26 +1,30 @@
 <div class="container mt-3">
 
   <h1 class="text-center">Order confirmation</h1>
-  <h3><%= @booking.disease.name %></h3>
-  <p><%= @booking.disease.description %></p>
 
-  <h3>Owner :</h3>
   <div class="row">
-    <div class="card-profil col-4">
+
+    <div class="card-disease my-3">
+      <%= image_tag @booking.disease.image %>
+      <h2><%= @booking.disease.name %></h2>
+      <p><%= @booking.disease.description %></p>
+
+    </div>
+
+    <div class="card-profil col-4 offset-1 my-3">
       <ul>
+        <h2>Owner :</h2>
         <li><strong>First name</strong> : <%= @booking.user.first_name %></li>
         <li><strong>Last name</strong> : <%= @booking.user.last_name %></li>
         <li><strong>Address</strong> : <%= @booking.user.address %></li>
         <li><strong>Email</strong> : <%= @booking.user.email %></li>
+        <br>
+        <h2>Duration :</h2>
+        <li><strong>From:</strong> <%= @booking.start_date %></li>
+        <li class="d-block mb-3"><strong>To:</strong> <%= @booking.end_date %></li>
       </ul>
     </div>
 
-    <div class="col-3 3-offset">
-      <br>
-      <h3>Duration :</h3>
-      <span>From: <%= @booking.start_date %></span>
-      <span class="d-block mb-3">To: <%= @booking.end_date %></span>
-    </div>
   </div>
 
   <%= link_to 'Back', bookings_path, class: "btn btn-ghost align-right" %>
