@@ -4,20 +4,25 @@
   <h3><%= @booking.disease.name %></h3>
   <p><%= @booking.disease.description %></p>
 
-  <br>
   <h3>Owner :</h3>
-  <p>First name : <%= @booking.user.first_name %></p>
-  <p>Last name : <%= @booking.user.last_name %></p>
-  <p>Address : <%= @booking.user.address %></p>
-  <p>Email : <%= @booking.user.email %></p>
+  <div class="row">
+    <div class="card-profil col-4">
+      <ul>
+        <li><strong>First name</strong> : <%= @booking.user.first_name %></li>
+        <li><strong>Last name</strong> : <%= @booking.user.last_name %></li>
+        <li><strong>Address</strong> : <%= @booking.user.address %></li>
+        <li><strong>Email</strong> : <%= @booking.user.email %></li>
+      </ul>
+    </div>
 
-
-  <br>
-  <h3>Duration :</h3>
-  <span>From: <%= @booking.start_date %></span>
-  <span class="d-block mb-3">To: <%= @booking.end_date %></span>
+    <div class="col-3 3-offset">
+      <br>
+      <h3>Duration :</h3>
+      <span>From: <%= @booking.start_date %></span>
+      <span class="d-block mb-3">To: <%= @booking.end_date %></span>
+    </div>
+  </div>
 
   <%= link_to 'Back', bookings_path, class: "btn btn-ghost align-right" %>
   <%= link_to 'Delete', disease_booking_path(@booking.disease, @booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
-
 </div>
