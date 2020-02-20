@@ -36,13 +36,16 @@ class DiseasesController < ApplicationController
   end
 
   def destroy
+    @disease = Disease.find(params[:id])
+    @disease.destroy
+    redirect_to profil_index_path
   end
 
 private
 
   def disease_params
 
-    params.require(:disease).permit(:name, :description, :user_id)
+    params.require(:disease).permit(:name, :description)
   end
 
 end
