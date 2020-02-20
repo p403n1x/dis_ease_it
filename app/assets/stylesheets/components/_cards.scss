@@ -80,3 +80,27 @@
   padding: 16px;
 }
 
+.card-profil {
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 36px;
+  background-color: #D0D0D0;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.card-profil h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom : 30px
+}
+
+.card-profil li {
+  list-style: none;
+  padding: 4px;
+}
+
+.card-profil a {
+  color: white;
+}
