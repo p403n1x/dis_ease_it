@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :bookings
-  has_many :diseases, through: :bookings
+  has_many :diseases
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :first_name, uniqueness: { scope: :last_name }
