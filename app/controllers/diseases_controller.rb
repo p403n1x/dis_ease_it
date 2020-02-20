@@ -15,11 +15,12 @@ class DiseasesController < ApplicationController
 
   def create
     @disease = Disease.new(disease_params)
-    @disease.image = "sample.jpg"
+    #@disease.image = "sample.jpg"
 
     if @disease.save
       redirect_to disease_path(@disease)
     else
+      raise
       render :new
     end
   end
@@ -30,7 +31,7 @@ class DiseasesController < ApplicationController
 private
 
   def disease_params
-    params.require(:disease).permit(:name, :description)
+    params.require(:disease).permit(:name, :description, :photos [])
   end
 
 end
