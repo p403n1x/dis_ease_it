@@ -1,11 +1,22 @@
 <div class="container">
-  <h1 class="text-center"> My profil </h1>
+  <h2 class="text-center"> Welcome <%=current_user.first_name%> ! </h2
 
-    <p> First name : <%= current_user.first_name %></p>
-    <p> Last name: <%= current_user.last_name %></p>
-    <p> E-mail : <%= current_user.email %></p>
-    <p> Address: <%= current_user.address %></p>
-    <p> <%= link_to "My Bookings", bookings_path %></p>
-    <p> <%= link_to "Add a new disease", new_disease_path %> </p>
+  <div class="row">
 
+    <div class="col-6">
+    </div>
+
+    <div class="card-profil col-6">
+      <ul>
+        <li> <strong>First name</strong>: <%= current_user.first_name %></li>
+        <li> <strong>Last name</strong>: <%= current_user.last_name %></li>
+        <li> <strong>E-mail</strong>: <%= current_user.email %></li>
+        <li> <strong>Address</strong>: <%= current_user.address %></li>
+      </ul>
+    </div>
+
+    <div class="btn btn-ghost" ><%= link_to "My Bookings", bookings_path %></div>
+    <div class="btn btn-ghost"><%= link_to "Add a new disease", new_disease_path %> </div>
+
+  </div>
 </div>

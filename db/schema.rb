@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 2020_02_20_113313) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_diseases_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,4 +76,5 @@ ActiveRecord::Schema.define(version: 2020_02_20_113313) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookings", "diseases"
   add_foreign_key "bookings", "users"
+  add_foreign_key "diseases", "users"
 end
