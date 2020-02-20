@@ -1,0 +1,9 @@
+
+<div class="container mt-3">
+  <%= simple_form_for @disease do |f| %>
+  <%= f.input :name, value: :name %>
+  <%= f.input :description, value: :description %>
+  <br>
+  <%= f.button :submit, 'Edit disease' , class:'btn btn-primary' %>
+  <% end %>
+</div>

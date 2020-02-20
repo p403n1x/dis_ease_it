@@ -16,12 +16,23 @@ class DiseasesController < ApplicationController
   def create
     @disease = Disease.new(disease_params)
     @disease.image = "sample.jpg"
-
+    @disease.user_id = current_user.id
     if @disease.save
-      redirect_to disease_path(@disease)
+      redirect_to profil_path
     else
       render :new
     end
+  end
+
+  def edit
+    @disease = Disease.find(params[:id])
+  end
+
+  def update
+    @disease = Disease.find(params[:id])
+    @disease.user_id = current_user.id
+    @restaurant.update(params[:disease])
+
   end
 
   def destroy
@@ -30,7 +41,8 @@ class DiseasesController < ApplicationController
 private
 
   def disease_params
-    params.require(:disease).permit(:name, :description)
+
+    params.require(:disease).permit(:name, :description, :user_id)
   end
 
 end
