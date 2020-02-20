@@ -5,13 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 puts "On détruit tout"
+
 Booking.delete_all
 Disease.delete_all
 
 
 puts "Création des maladies"
-
 
 file = File.open("./app/assets/images/coronavirus.jpg")
 d =Disease.new(name: 'Coronavirus', description: 'Any of a group of RNA viruses that cause a variety of diseases in humans and other animals.', user_id: 1)
@@ -45,16 +46,5 @@ file = File.open("./app/assets/images/tonsillitis.jpg")
 d =Disease.new(name: 'Tonsillitis', description: 'Tonsillitis is an inflammation of the tonsils, two oval-shaped pads of tissue at the back of the throat — one tonsil on each side.', user_id: 1)
 d.image.attach(io: file, filename: "tonsillitis.jpg", content_type: "image/jpg")
 d.save!
-
-
-
-
-
-# d = Disease.new(name: 'Delhi belly', image: 'delhi_belly.jpg', description: 'an upset stomach accompanied by diarrhoea, especially as suffered by visitors to India.')
-# Disease.new(name: 'Gastroentiritis', image: 'gastro.jpg', description: 'The majority of cases of acute diarrhea correspond to gastroenteritis of viral origin, most often trivial and of short duration.')
-# Disease.new(name: 'Measles', image: 'measles.jpg', description: 'Measles is a highly contagious infectious disease caused by the measles virus.Symptoms usually develop 10–12 days after exposure to an infected person and last 7–10 days.')
-# Disease.new(name: 'Food poisoning', image: 'food_poisoning.jpg', description: 'illness caused by bacteria or other toxins in food, typically with vomiting and diarrhoea.')
-# Disease.new(name: 'Chlamydia', image: 'chlamydia.jpg',description: 'is a sexually transmitted infection caused by the bacterium Chlamydia trachomatis.')
-# Disease.new(name: 'Tonsillitis', image: 'tonsillitis.jpg', description: 'Tonsillitis is inflammation of the tonsils, two oval-shaped pads of tissue at the back of the throat — one tonsil on each side.')
 
 puts "Finish "
