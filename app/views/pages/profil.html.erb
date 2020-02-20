@@ -1,22 +1,23 @@
 <div class="container">
   <h2 class="text-center"> Welcome <%=current_user.first_name%> ! </h2
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-6">
+      <div class="col-6">
+      </div>
+
+      <div class="card-profil col-6">
+        <ul>
+          <li> <strong>First name</strong>: <%= current_user.first_name %></li>
+          <li> <strong>Last name</strong>: <%= current_user.last_name %></li>
+          <li> <strong>E-mail</strong>: <%= current_user.email %></li>
+          <li> <strong>Address</strong>: <%= current_user.address %></li>
+        </ul>
+      </div>
+
+      <div class="btn btn-ghost" ><%= link_to "My Bookings", bookings_path %></div>
+      <div class="btn btn-ghost"><%= link_to "My diseases", profil_index_path %> </div>
+      <div class="btn btn-ghost"><%= link_to "Add a new disease", new_disease_path %> </div>
+
     </div>
-
-    <div class="card-profil col-6">
-      <ul>
-        <li> <strong>First name</strong>: <%= current_user.first_name %></li>
-        <li> <strong>Last name</strong>: <%= current_user.last_name %></li>
-        <li> <strong>E-mail</strong>: <%= current_user.email %></li>
-        <li> <strong>Address</strong>: <%= current_user.address %></li>
-      </ul>
-    </div>
-
-    <div class="btn btn-ghost" ><%= link_to "My Bookings", bookings_path %></div>
-    <div class="btn btn-ghost"><%= link_to "Add a new disease", new_disease_path %> </div>
-
   </div>
-</div>

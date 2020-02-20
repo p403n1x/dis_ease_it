@@ -1,0 +1,21 @@
+<div class="container">
+
+  <h1>Your diseases</h1>
+
+
+  <div class="cards-index">
+
+    <% @diseases.each do |disease| %>
+    <div class="card-disease">
+      <%= image_tag disease.image %>
+      <div class="card-product-infos">
+        <h2><%= disease.name %></h2>
+        <p><%= disease.description %></p>
+        <%= link_to 'Delete', profil_destroy_path(disease), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>
+
