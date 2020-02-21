@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,7 +20,7 @@
 .search-form-control {
   position: relative;
   padding: 0;
-  width: 50em;
+  width: 80%;
 }
 
 .search-form-control .btn {
@@ -26,8 +28,6 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
-  opacity: 1;
-
 }
 
 .search-form-control .form-control {
@@ -35,7 +35,6 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
   border-radius: 10px;
-  opacity: 0.1;
   border-color: gray;
 }
 
@@ -47,6 +46,7 @@
 
 .form-group {
   margin-bottom: 0px;
+  width: 100vh;
 }
 
 #nav-title {
