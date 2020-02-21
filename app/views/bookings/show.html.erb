@@ -20,7 +20,7 @@
         <li><strong>Address</strong> : <%= @booking.user.address %></li>
         <li><strong>Email</strong> : <%= @booking.user.email %></li>
         <br>
-        <h2>Duration :</h2>
+        <li><strong>Duration </strong>: <%= (@booking.end_date - @booking.start_date).to_i%> days</li>
         <li><strong>From:</strong> <%= @booking.start_date %></li>
         <li class="d-block mb-3"><strong>To:</strong> <%= @booking.end_date %></li>
       </ul>
@@ -28,7 +28,7 @@
 
   </div>
 
-  <%= link_to 'Back', bookings_path, class: "btn btn-ghost align-right" %>
+  <%= link_to 'My Bookings', bookings_path, class: "btn btn-ghost align-right" %>
   <%= link_to 'Delete', disease_booking_path(@booking.disease, @booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
 </div>
 
