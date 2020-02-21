@@ -41,7 +41,7 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .card-disease {
@@ -49,9 +49,11 @@
   height: 200px;
   width : 450px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
+  border-radius: 5px;
+
 }
 
 .card-disease img {
@@ -78,7 +80,10 @@
 
 .card-disease .card-disease-infos {
   padding: 16px;
+  background-color: white;
+  text-align: justify;
 }
+
 
 .card-profil {
   border-radius: 4px;
@@ -86,7 +91,7 @@
   margin-bottom: 20px;
   margin-top: 30px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .card-profil h2 {
