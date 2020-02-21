@@ -11,10 +11,10 @@
 
   <h3 class="text-center my-5">Trending</h3>
 
-  <div class="cards justify-content-center">
-    <% @selection.each do |s| %>
-      <%= link_to disease_path(s) do %>
-        <div class="row">
+  <div class="cards-index">
+    <div class="row">
+      <% @selection.each do |s| %>
+        <%= link_to disease_path(s) do %>
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card-disease align-content m-3">
               <%= cl_image_tag s.image.key, height: 300, width: 400, crop: :fill %>
@@ -23,11 +23,12 @@
                   <h2><%= s.name %></h2>
                   <p><%= s.description %></p>
                 </div>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
