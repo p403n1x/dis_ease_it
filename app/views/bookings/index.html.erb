@@ -1,14 +1,14 @@
 <div class="container mt-3">
 
 
-  <h2 class="text-center mb-3"> <%=current_user.first_name%>'s bookings! 🦠</h2>
+  <h2 class="text-center mb-3"> <%=current_user.first_name%>'s bookings ! 🦠</h2>
 
   <br>
   <div class="row justify-content-center">
 
     <div class="cards-index">
 
-    <% @bookings.each do |booking| %>
+      <% @bookings.each do |booking| %>
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card-disease align-content mb-3">
           <%= cl_image_tag booking.disease.image.key, height: 300, width: 400, crop: :fill %>
@@ -25,6 +25,6 @@
       <% end %>
     </div>
   </div>
-<br>
-<%= link_to 'Home', root_path, class: "btn btn-ghost" %>
+  <br>
+  <%= link_to 'Home', root_path, class: "btn btn-ghost mr-3" %>
 </div>

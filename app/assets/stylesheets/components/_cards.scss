@@ -89,11 +89,13 @@
   border-radius: 4px;
   padding: 36px;
   margin-bottom: 20px;
+  margin-right: 40px;
   margin-top: 30px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  width: 80vh;
-  height: 40vh;
+  display: inline-flex;
+  justify-content: space-between;
+  vertical-align: middle;
 }
 
 .card-profil h2 {
@@ -113,12 +115,8 @@
 }
 
 .card-profil ul img {
-  height: 100%;
-  width: 180px;
+
   min-width: 180px;
   object-fit: cover;
   border-radius: 4px;
-  position: relative;
-  top : -150px;
-  left : 400px;
 }

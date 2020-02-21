@@ -3,7 +3,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="row justify-content-center">
             <% chosen_disease = @disease.name  %>
-            <h4 class="text-center">Sure you want <%=chosen_disease   %>?</h4>
+            <h4 class="text-center">Sure you want <strong><%=chosen_disease %></strong> ?</h4>
             <div class="card-disease my-3">
               <%= cl_image_tag @disease.image.key, height: 300, width: 400, crop: :fill %>
               <p class="mx-3"><%= @disease.description %></p>
@@ -14,5 +14,3 @@
         </div>
       </div>
     </div>
-
-
