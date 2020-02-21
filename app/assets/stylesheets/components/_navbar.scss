@@ -33,7 +33,7 @@
   border-color: gray;
 }
 .search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
+  border: 1px solid black;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
@@ -41,6 +41,7 @@
   margin-bottom: 0px;
   width: 100vh;
 }
+
 #nav-title {
   font-size: 30px;
   vertical-align: middle;
