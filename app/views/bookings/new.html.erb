@@ -1,13 +1,13 @@
 
 <div class="container mt-3">
-  <h1>Book <%= @disease.name %> 🦠</h1>
+  <h1 class="text-center">Book <%= @disease.name %> </h1>
   <%= simple_form_for([@disease, @booking]) do |f| %>
     <p><%= f.input :start_date %></p>
     <p><%= f.input :end_date %></p>
     <br>
-    <%= f.submit %>
+    <%= f.submit class:'btn btn-flat'%>
   <% end %>
 
   <br>
-  <%= link_to 'Back', diseases_path, class: "btn btn-ghost"%>
-</div>
+
+  <%= link_to 'Back', diseases_path, class: 'btn btn-ghost'%>
