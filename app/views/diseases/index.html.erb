@@ -2,9 +2,16 @@
 
   <h1 class="text-center">Find our special diseases for all your wishes</h1>
 
-
   <div class="cards-index">
-    <%= render 'shared/cards' %>
-  </div>
 
+    <% @diseases.each do |disease| %>
+    <div class="card-disease">
+      <%= image_tag disease.image %>
+      <div class="card-product-infos mx-3">
+        <h2><%= disease.name %></h2>
+        <p class="mb-3"><%= disease.description %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
