@@ -15,6 +15,7 @@
             <h3><%= link_to booking.disease.name, booking_path(booking) %></h3>
             <p class="text-decoration: none"><strong>From:</strong> <%= booking.start_date %></p>
             <p class="d-block mb-3"><strong>To:</strong> <%= booking.end_date %></p>
+            <p class="d-block mb-3"><strong>Duration:</strong> <%= (booking.end_date - booking.start_date).to_i%> days</p>
           </div>
         </div>
       </div>
