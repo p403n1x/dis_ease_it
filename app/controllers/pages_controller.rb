@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 
 
   def profil
+    @user = current_user.image
   end
 
   def index

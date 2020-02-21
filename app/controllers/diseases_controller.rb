@@ -4,10 +4,14 @@ class DiseasesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @diseases = Disease.all
+    if params[:query].present?
+      @diseases = Disease.search_by_name_and_description(params[:query])
+    else
+     @diseases = Disease.all
+    end
   end
 
-  def show
+   def show
     @disease = Disease.find(params[:id])
   end
 
@@ -41,12 +45,6 @@ class DiseasesController < ApplicationController
 
 
 
-
-
-
-
-
-
   def edit
     @disease = Disease.find(params[:id])
   end
@@ -64,7 +62,7 @@ class DiseasesController < ApplicationController
     redirect_to profil_index_path
   end
 
-private
+  private
 
   def disease_params
     params.require(:disease).permit(:name, :description, :user_id)
