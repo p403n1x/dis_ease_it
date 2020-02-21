@@ -3,33 +3,28 @@
   background: white;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 70px;
   margin-right: 5px;
 }
-
-
 // Search in NavBar CSS
-
 .search-form-control {
   position: relative;
   padding: 0;
   width: 80%;
+  flex-grow: 2;
 }
-
 .search-form-control .btn {
   position: absolute;
   top: 8px;
   bottom: 8px;
   right: 8px;
 }
-
 .search-form-control .form-control {
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -37,18 +32,15 @@
   border-radius: 10px;
   border-color: gray;
 }
-
 .search-form-control .form-control:focus {
   border: 1px solid black;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-
 .form-group {
   margin-bottom: 0px;
   width: 100vh;
 }
-
 
 #nav-title {
   font-size: 30px;
